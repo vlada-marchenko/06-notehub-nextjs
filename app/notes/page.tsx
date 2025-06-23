@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic'
 
 const NotesClient = dynamic(() => import('./Notes.client'))
 
-const NotesPage = async () => {
+async function NotesPage() {
   const initialSearch = ''
   const initialPage = 1
 
