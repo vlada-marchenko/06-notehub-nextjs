@@ -1,7 +1,9 @@
+export const dynamicVar = 'force-dynamic';
 
 import { fetchNotes } from '../../lib/api'
 import css from '../../app/page.module.css'
 import dynamic from 'next/dynamic'
+
 
 const NotesClient = dynamic(() => import('./Notes.client'))
 
