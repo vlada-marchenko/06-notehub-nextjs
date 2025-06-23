@@ -1,13 +1,13 @@
-export const dynamicVar = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 
 import { fetchNotes } from '../../lib/api'
 import css from '../../app/page.module.css'
-import dynamic from 'next/dynamic'
+import loadable from 'next/dynamic'
 
 
-const NotesClient = dynamic(() => import('./Notes.client'))
+const NotesClient = loadable(() => import('./Notes.client'))
 
-async function NotesPage() {
+export default async function NotesPage() {
   const initialSearch = ''
   const initialPage = 1
 
@@ -19,4 +19,3 @@ async function NotesPage() {
   )
   
 }
-export default NotesPage
