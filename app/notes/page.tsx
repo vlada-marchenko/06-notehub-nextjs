@@ -17,5 +17,4 @@ export default async function NotesPage() {
       <NotesClient initialNotes={response.notes} initialPage={initialPage} initialSearch={initialSearch}/>
     </div>
   )
-  
 }
