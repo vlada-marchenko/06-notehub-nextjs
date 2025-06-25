@@ -28,7 +28,7 @@ const NotesClient = ({ initialNotes, initialPage, initialSearch}: Props) => {
   const { data, isLoading, error } = useQuery<HttpResponse, Error>({
 	queryKey: ['notes', page, debouncedSearch] ,
   queryFn: () => fetchNotes({ search: debouncedSearch, page, perPage }),
-	placeholderData: { notes: initialNotes, totalPages: 1 },
+  initialData: { notes: initialNotes, totalPages: 1 },
   refetchOnWindowFocus: false
   });
 

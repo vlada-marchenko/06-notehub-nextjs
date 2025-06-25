@@ -2,10 +2,7 @@ export const dynamic = 'force-dynamic';
 
 import { fetchNotes } from '../../lib/api'
 import css from '../../app/page.module.css'
-import loadable from 'next/dynamic'
-
-
-const NotesClient = loadable(() => import('./Notes.client'))
+import NotesClient from './Notes.client'
 
 export default async function NotesPage() {
   const initialSearch = ''
